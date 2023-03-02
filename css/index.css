@@ -1,6 +1,46 @@
+/* Global */
+
+body {
+    margin: 0px;
+}
+
+section {    
+    min-height: 982px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .background-image {
-    background-image: url('../images/mdl_background.png');
+    background-image: url('../images/mdl_homeback.png');
     background-size: cover;
 
 }
 
+/*Buttons */
+
+.home-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.home-button {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 44px;
+    text-align: center;
+    color: #608666;
+    background-color: transparent;
+    border: 3px solid #FFEFE0;
+    border-radius: 5px;
+    width: 295px;
+    cursor: pointer;
+}
+
+.home-button:hover {
+    color: #F2FDE8D;
+    background-color: #FFEFE0;
+    border: 1px solid #D07B8D;
