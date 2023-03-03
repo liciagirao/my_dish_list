@@ -1,8 +1,8 @@
 /* Global */
 
 @font-face {
-font-family: Raleway;
-src: url('../fonts/Raleway-Regular.ttf');
+    font-family: Raleway;
+    src: url('../fonts/Raleway-Regular.ttf');
 }
 
 body {
@@ -14,9 +14,15 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;    
-    min-height: 982px;
-    padding-right: 50px;
-    padding-left: 50px;
+    min-height: 61.375rem;
+    padding-right: 3.125rem;
+    padding-left: 3.125rem;
+}
+
+@media only screen and (max-width: 821px) {
+    section {
+        height: 100vh;
+    }
 }
 
 .background-image {
@@ -34,6 +40,12 @@ section {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 600px) {
+    .logo-icon img {
+        height: 9.375rem;
+    }
+}
+
 .logo-icon:hover {
     background-image: url('../images/mdl_darklogo.png');
 }
@@ -48,24 +60,40 @@ section {
 
 .content-container h1 {
     font-family: Raleway;
-    font-size: 70px;
+    font-size: 4.375rem;
     margin-top: 0;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 821px) {
+    .content-container h1 {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+        text-align: center;
+    }
 }
 
 .home-button {
     font-family: Raleway;
-    padding: 70px;
+    padding: 4.375rem;
     font-style: normal;
     font-weight: 700;
-    font-size: 70px;
-    line-height: 44px;
+    font-size: 4.375rem;
+    line-height: 2.75rem;
     text-align: center;
     color: #608666;
     background-color: #FFFFFF;
-    border: 3px solid #608666;
-    border-radius: 35px;
+    border: 0.188rem solid #608666;
+    border-radius: 2.188rem;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 821px) {
+    .home-button {
+        padding: 3.375rem;
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+    }
 }
 
 .home-button:hover {
@@ -73,28 +101,47 @@ section {
     background-color: #F2FDE8;
 }
 
-.recipe-image {
+.content-image {
     width: 33%;
+}
+
+@media only screen and (max-width: 821px) {
+    .content-image {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .content-image {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 821px) {
+    .action-button-container {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .action-button {
     font-family: Raleway;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    width: 343px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 21.438rem;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 1.25rem;
+    line-height: 1.438rem;
     text-align: center;
     color: #000000;
     background-color: #FFFFFF;
-    border: 3px solid #FFD3AA;
-    border-radius: 35px;
+    border: 0.188rem solid #FFD3AA;
+    border-radius: 2.188rem;
     cursor: pointer;
-    margin-top: 40px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-top: 2.5rem;
+    margin-left: 1.563rem;
+    margin-right: 1.563rem;
 }
 
 .action-button:hover {
@@ -112,5 +159,12 @@ section {
 
 .footer p {
     font-family: Raleway;
-    font-size: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 821px) {
+    .footer p {
+        font-size: 0.75rem;
+    }
 }
