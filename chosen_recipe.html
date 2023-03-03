@@ -14,11 +14,11 @@
         </a>
 
         <div class="content-container">
-            <h1>Feta Cheese Wrap!</h1>
+            <h1 class="recipe-title">Feta Cheese Wrap!</h1>
             <img class="recipe-image" src="images\mdl_fetacheese.png" alt="Feta Cheese Wrap">
             <div>
-                <button class="action-button">Yummy! I loved it!</button>
                 <button class="action-button">I want something more delicious</button>
+                <button class="action-button">Yummy! I loved it!</button>
             </div>
         </div>
 
@@ -28,6 +28,48 @@
 
     </section>
 
+    <script>
+        var iWantSomethingElseButton = document.getElementsByClassName("action-button")[0];
+        iWantSomethingElseButton.addEventListener("click", function() {
+            window.location.href = "loading_page.html";
+        });
+
+        var iLovedItButton = document.getElementsByClassName("action-button")[1];
+        iLovedItButton.addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        function selectRandomRecipe() {
+            var recepies = [
+                { 
+                    title: "Feta Cheese Wrap!",
+                    imageUrl: "images/mdl_fetacheese.png", 
+                },
+                { 
+                    title: "Pesto & Pasta!",
+                    imageUrl: "images/mdl_pestopasta.png", 
+                },
+                { 
+                    title: "Tuna Salad!",
+                    imageUrl: "images/mdl_tunasalad.png", 
+                },
+            ];
+
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * max);
+            };
+
+            var chosenRecipe = recepies[getRandomInt(recepies.length)];
+            
+            var recipeImage = document.getElementsByClassName("recipe-image")[0];
+            recipeImage.setAttribute("src", chosenRecipe.imageUrl);
+
+            var recipeTitle = document.getElementsByClassName("recipe-title")[0];
+            recipeTitle.innerHTML = chosenRecipe.title;
+        }
+
+        selectRandomRecipe();
+    </script>
 </body>
 
 </html>
