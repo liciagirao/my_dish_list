@@ -1,46 +1,117 @@
 /* Global */
 
+@font-face {
+font-family: Raleway;
+src: url('../fonts/Raleway-Regular.ttf');
+}
+
 body {
     margin: 0px;
 }
 
-section {    
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
     min-height: 982px;
     padding-right: 50px;
     padding-left: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 .background-image {
     background-image: url('../images/mdl_homeback.png');
-    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
 
+.logo-icon {
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.logo-icon:hover {
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
 }
 
 /*Buttons */
 
-.home-button-container {
+.content-container {
     display: flex;
-    justify-content: center;
-    margin-top: 48px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-container h1 {
+    font-family: Raleway;
+    font-size: 70px;
+    margin-top: 0;
+    margin-bottom: 24px;
 }
 
 .home-button {
+    font-family: Raleway;
+    padding: 70px;
     font-style: normal;
     font-weight: 700;
     font-size: 70px;
     line-height: 44px;
     text-align: center;
     color: #608666;
-    background-color: transparent;
-    border: 3px solid #FFEFE0;
-    border-radius: 5px;
-    width: 295px;
+    background-color: #FFFFFF;
+    border: 3px solid #608666;
+    border-radius: 35px;
     cursor: pointer;
 }
 
 .home-button:hover {
-    color: #F2FDE8D;
-    background-color: #FFEFE0;
-    border: 1px solid #D07B8D;
+    color: #608666;
+    background-color: #F2FDE8;
+}
+
+.recipe-image {
+    width: 33%;
+}
+
+.action-button {
+    font-family: Raleway;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    width: 343px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #000000;
+    background-color: #FFFFFF;
+    border: 3px solid #FFD3AA;
+    border-radius: 35px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.action-button:hover {
+    background-color: #FBEEE2;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer p {
+    font-family: Raleway;
+    font-size: 20px;
+}
